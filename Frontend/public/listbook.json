@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "name": "Story Book",
+    "title": "You Can Win",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/three-giraffes-living-by-river_1308-55578.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Adventure Tales",
+    "title": "Jungle Quest",
+    "price": "450",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/tiger-jungle-scene_1308-62790.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mystery Book",
+    "title": "The Hidden Truth",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/detective-investigating-secret-room_1308-12890.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Science Fiction",
+    "title": "Galactic Odyssey",
+    "price": "500",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/space-exploration-scene-with-astronaut-planet_1308-66542.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Historical Novel",
+    "title": "War and Peace",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/medieval-battle-scene_1308-14890.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Cookbook",
+    "title": "Master Chef",
+    "price": "250",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/chef-holding-dish-vector-illustration_1308-15890.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Children's Book",
+    "title": "Fun in the Sun",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/children-playing-park_1308-78890.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Horror Story",
+    "title": "Dark Shadows",
+    "price": "350",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/haunted-house-scene_1308-55890.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Self Help",
+    "title": "Mindset Mastery",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/self-development-concept-illustration_1308-88902.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Fantasy Novel",
+    "title": "Dragons and Dreams",
+    "price": "480",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/fantasy-scene-with-dragon-castle_1308-44588.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Travelogue",
+    "title": "Wanderlust Diaries",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/travel-concept-with-illustrations_1308-49903.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Biography",
+    "title": "The Story of Genius",
+    "price": "420",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/person-holding-book-concept-illustration_1308-80902.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Romantic Novel",
+    "title": "Hearts United",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/romantic-couple-walking-park_1308-77988.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Graphic Novel",
+    "title": "Superhero Chronicles",
+    "price": "600",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/superhero-cityscape_1308-23478.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Thriller",
+    "title": "The Silent Witness",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/man-sitting-alone-night_1308-45509.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Fantasy Adventure",
+    "title": "The Lost Kingdom",
+    "price": "520",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/magical-kingdom-scene_1308-13490.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Short Stories",
+    "title": "Whispers of Life",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/woman-reading-book_1308-48989.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Science Guide",
+    "title": "Physics Made Easy",
+    "price": "290",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/physics-concept_1308-67802.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Motivational Book",
+    "title": "Dare to Dream",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/motivation-concept-with-illustrations_1308-88903.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Humor",
+    "title": "Laugh Out Loud",
+    "price": "200",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/funny-characters-concept_1308-78802.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Art Book",
+    "title": "Masterpieces Unveiled",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/art-gallery-concept_1308-77909.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Nature Book",
+    "title": "Wonders of the Wild",
+    "price": "320",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/forest-scene-daytime_1308-45349.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Classic Novel",
+    "title": "The Great Gatsby",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/gatsby-era-style-background_1308-44877.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Philosophy",
+    "title": "The Meaning of Life",
+    "price": "370",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/philosophical-concept_1308-45809.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Educational Book",
+    "title": "Math Genius",
+    "price": "0",
+    "category": "free",
+    "image": "https://img.freepik.com/free-vector/mathematics-education-concept_1308-87902.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Crime Novel",
+    "title": "Undercover",
+    "price": "480",
+    "category": "paid",
+    "image": "https://img.freepik.com/free-vector/crime-scene-detective_1308-34590.jpg"
+  }
+]
