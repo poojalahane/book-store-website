@@ -8,7 +8,7 @@ const Navbar = () => {
   const [auth, setAuth] = useAuth();
   console.log(auth);
 
-  const [theme, setTheme] = useState(
+  let [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
 
