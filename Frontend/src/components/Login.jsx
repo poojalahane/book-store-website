@@ -1,36 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
 const Login = () => {
+  const [loginError, setLoginError] = useState("");
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    const userData = await axios
-      .post("http://localhost:5000/user/login", {
+    try {
+      const res = await axios.post("http://localhost:5000/user/login", {
         email: data.email,
         password: data.password,
-      })
-      .then((res) => {
-        console.log(res.data);
-        if (res.data) {
-          alert("LOGIN Successfully");
-          document.getElementById("my_modal_3").close();
-          setTimeout(() => {
-            window.location.reload();
-            localStorage.setItem("Users", JSON.stringify(res.data));
-          }, 3000);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        alert("Error", +err);
       });
-    console.log(data);
+      console.log(res.data);
+      if (res.data) {
+        alert("LOGIN Successfully");
+        document.getElementById("my_modal_3").close();
+        localStorage.setItem("Users", JSON.stringify(res.data));
+        navigate("/");
+      }
+    } catch (err) {
+      console.log(err);
+      setLoginError("Invalid Email or Password");
+    }
   };
   return (
     <div className="">
@@ -43,7 +40,7 @@ const Login = () => {
             <Link
               to="/"
               className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-              onClick={() => document.getElementById("my_model_3").close()}
+              onClick={() => document.getElementById("my_modal_3").close()}
             >
               ✕
             </Link>
@@ -65,7 +62,7 @@ const Login = () => {
               )}
             </div>
             <div className="mt-4 space-y-2">
-              <span>Passward</span>
+              <span>Password</span>
               <br />
               <input
                 type="password"
@@ -76,6 +73,9 @@ const Login = () => {
               <br />
               {errors.password && <span>This field is required</span>}
             </div>
+            {loginError && (
+              <p className="text-red-500 text-sm mt-2">{loginError}</p>
+            )}
             <div className="flex justify-around mt-4">
               <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover: bg-pink-700 duration-200">
                 Login

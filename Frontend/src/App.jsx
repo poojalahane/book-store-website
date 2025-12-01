@@ -1,11 +1,10 @@
 import React from "react";
-
-import Home from "./pages/Home";
-import Course from "./components/Course";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/Home";
 import Courses from "./pages/Courses";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import PdfViewer from "./components/PdfViewer";
 import { useAuth } from "./context/AuthProvider";
 
 const App = () => {
@@ -25,9 +24,12 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<Home />} />
           <Route path="/contact" element={<Home />} />
+          <Route
+            path="/pdf/:id"
+            element={auth ? <PdfViewer /> : <Navigate to="/signup" />}
+          />
         </Routes>
       </BrowserRouter>
-      {/* */}
     </div>
   );
 };
