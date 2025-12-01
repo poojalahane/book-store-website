@@ -57,7 +57,7 @@ const Navbar = () => {
   );
   return (
     <div
-      className={`max-w-screen-2xl z-50 container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 
+      className={`max-w-screen-2xl z-50 container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0
         ${
           sticky
             ? "sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out"
@@ -162,15 +162,6 @@ const Navbar = () => {
               </div>
             </>
           )}
-          {/* <div className="">
-            <a
-              className="bg-black text-white px-3 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
-              onClick={() => document.getElementById("my_modal_3").showModal()}
-            >
-              Login
-            </a>
-            <Login />
-          </div> */}
         </div>
       </div>
     </div>

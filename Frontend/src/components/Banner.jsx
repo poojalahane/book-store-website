@@ -1,15 +1,16 @@
 import React from "react";
-import banner from "../../public/Banner2.jpg";
+import banner from "../assets/Banner2.jpg";
+
 const Banner = () => {
   return (
     <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10">
-      <div className="w-full order-2 md:order-1 md:w-1/2 mt-12 md:mt-32">
+      <div className="w-full order-2 md:order-1 md:w-1-2 mt-12 md:mt-32">
         <div className="space-y-12">
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-2xl md:text-4xl font-bold">
             Hello, Welcome here to learn something{"  "}
             <span className="text-pink-500">new everyday</span>
           </h1>
-          <p className="text-xl">
+          <p className="text-md md:text-xl">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
             vero quibusdam molestias accusantium laudantium! Cupiditate
           </p>
@@ -30,7 +31,11 @@ const Banner = () => {
       </div>
 
       <div className="w-full order-1 md:w-1/2">
-        <img src={banner} className="w-92 h-92" alt="" />
+        <img
+          src={banner}
+          className="w-full h-auto md:w-[500px] md:h-[500px] md:ml-12"
+          alt=""
+        />
       </div>
     </div>
   );

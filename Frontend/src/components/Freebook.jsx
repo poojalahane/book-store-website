@@ -2,38 +2,57 @@ import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import listbook from "../../public/listbook.json";
 import Card from "./Card";
 import axios from "axios";
 
 const Freebook = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-  const [allBook, setAllBooks] = useState([]);
   const [freeBook, setFreeBooks] = useState([]);
   useEffect(() => {
-    const allBooks = async () => {
-      const books = await listbook;
-      setAllBooks(books);
-    };
     const freeBooks = async () => {
-      // const books = await listbook.filter((b) => b.category === "free");
-      const books = await axios.get("http://localhost:5000/book");
-      console.log(books.data.book.filter((b) => b.category === "free"));
-      setFreeBooks(books.data.book.filter((b) => b.category === "free"));
+      const res = await axios.get("http://localhost:5000/book/free");
+      setFreeBooks(res.data.books);
     };
-    allBooks();
     freeBooks();
   }, []);
-  //console.log(allBook);
+
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 color-red">
+      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
         <div>
           <h1 className="font-semibold text-xl pb-2">Free Offered Books</h1>
           <p>
@@ -56,31 +75,3 @@ const Freebook = () => {
 };
 
 export default Freebook;
-//
-
-{
-  /* <div className="flex flex-col">
-{freeBook.map((b) => {
-  return (
-    <div className="flex flex-col" key={b.id}>
-      <div
-        key={b.id}
-        className="card bg-base-100 w-96 shadow-xl flex flex-col"
-      >
-        <figure>
-          <img src={`${b.image}`} alt="Shoes" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">{b.title}</h2>
-          <p>{b.name}</p>
-          <p>{b.price}</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-})}
-</div> */
-}

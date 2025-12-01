@@ -1,23 +1,24 @@
-import React, { useEffect } from "react";
-import listbook from "../../public/listbook.json";
+import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import axios from "axios";
+
 const Courses = () => {
-  //console.log(listbook);
+  const [books, setBooks] = useState([]);
 
   useEffect(() => {
     const getCourses = async () => {
       try {
-        const courses = await axios.get("http://localhost:5000/book");
-        console.log(courses.data.book);
+        const res = await axios.get("http://localhost:5000/book");
+        setBooks(res.data.book);
       } catch (error) {
         console.log(error);
       }
     };
     getCourses();
   }, []);
+
   return (
     <>
       <Navbar />
@@ -46,7 +47,7 @@ const Courses = () => {
           </Link>
         </div>
         <div className="mt-12  grid grid-cols-1 md:grid-cols-4">
-          {listbook.map((item) => (
+          {books.map((item) => (
             <Card key={item.id} item={item} />
           ))}
         </div>
